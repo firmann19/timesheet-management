@@ -1,0 +1,37 @@
+.content {
+    background-color: white;
+}
+
+.content .side-left {
+    display: flex;
+    align-items: center;
+  }
+  
+.content .btn-add-activity {
+    background-color: #F0F6FF;
+    color: #2775EC;
+    border: none;
+    margin-left: 8px;
+}
+
+.content .header-content  {
+    justify-content: space-between;
+}
+
+.content .btn-content {
+    display: flex;
+    align-items: center;
+  }
+  
+.content .btn-content .icon {
+    margin-right: 6px;
+  }
+
+.content .side-right {
+    display: flex;
+    align-items: center;
+  }
+  
+.content .icon-button {
+    margin-left: 8px;
+  }
