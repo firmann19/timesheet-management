@@ -1,0 +1,38 @@
+.form-datepicker {
+    width: 100px;
+}
+
+.btn-simpan {
+    font-family: 'Quicksand', sans-serif;
+	font-weight: bold;
+    color: #ffff;
+    background-color: #F15858;
+    border: none;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .btn-simpan:hover:enabled {
+    box-shadow: 0 0.5em 0.5em -0.4em #fa4b4b;
+    background-color: #f32727;
+    color: #ffff;
+    background-size: 100% 100%;
+    transform: translateY(-0.15em);
+  }
+
+  .btn-batal {
+    font-family: 'Quicksand', sans-serif;
+	font-weight: bold;
+    color: #F15858;
+    background-color: #F7F8FB;
+    border: none;
+    background-size: 300% 100%;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .btn-batal:hover:enabled {
+    box-shadow: 0 0.5em 0.5em -0.4em #eceff9;
+    background-color: #eceff9;
+    color: #F15858;
+    background-size: 100% 100%;
+    transform: translateY(-0.15em);
+  }

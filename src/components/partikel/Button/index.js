@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "react-bootstrap";
 
 function SButton({
+  id,
   children,
   action,
   variant,
@@ -10,10 +11,11 @@ function SButton({
   disabled,
   className,
   href,
-  style
+  style,
 }) {
   return (
     <Button
+      id={id}
       className={className}
       onClick={action}
       variant={variant}

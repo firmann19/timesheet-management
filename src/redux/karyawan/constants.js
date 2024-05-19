@@ -1,0 +1,6 @@
+export const START_FETCHING_KARYAWANS =
+  "redux/karyawans/START_FETCHING_KARYAWANS";
+export const SUCCESS_FETCHING_KARYAWANS =
+  "redux/karyawans/SUCCESS_FETCHING_KARYAWANS";
+export const ERROR_FETCHING_KARYAWANS =
+  "redux/karyawans/ERROR_FETCHING_KARYAWANS";

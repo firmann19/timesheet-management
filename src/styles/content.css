@@ -14,6 +14,13 @@
     margin-left: 8px;
 }
 
+.content .btn-add-proyek {
+  background-color: #F0F6FF;
+  color: #F15858;
+  border: none;
+  margin-left: 8px;
+}
+
 .content .header-content  {
     justify-content: space-between;
 }
@@ -35,3 +42,24 @@
 .content .icon-button {
     margin-left: 8px;
   }
+
+.popupAddActivity {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.popupAddProyek {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.popupEditActivity {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
