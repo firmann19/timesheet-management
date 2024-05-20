@@ -35,10 +35,7 @@ function Content() {
 
   const [isLoading, setIsLoading] = useState(false);
 
-  const [employee, setEmployee] = useState({
-    nama: "",
-    rate: "",
-  });
+  const [employee, setEmployee] = useState(null);
 
   const handleAddActivityClick = () => {
     setAddActivity((prevVisible) => !prevVisible);
@@ -66,8 +63,6 @@ function Content() {
     } else {
       setForm2({ ...form2, [e.target.name]: e.target.value });
     }
-    console.log(e.target.value);
-    console.log("e.target.value");
   };
 
   const handleSubmit = async () => {
@@ -163,10 +158,11 @@ function Content() {
 
   const fetchEmployeeData = async () => {
     const res = await getData(`/karyawan`);
-    console.log("Response data:", res.data);
     if (res?.data?.data) {
       const firstEmployee = res.data.data[0];
       setEmployee(firstEmployee);
+    } else {
+      setEmployee(null); // If no data is available, set employee to null
     }
   };
 
@@ -175,8 +171,6 @@ function Content() {
     dispatch(fetchKegiatans());
     fetchEmployeeData();
   }, [dispatch]);
-
-  console.log("Employee Data:", employee);
 
   return (
     <section>
@@ -199,12 +193,12 @@ function Content() {
                 <div className="d-flex">
                   <div>
                     <p className="me-5">Nama Karyawan</p>
-                    <p className="me-5">{employee.nama}</p>
+                    <p className="me-5">{employee?.nama || "Belum ada nama"}</p>
                   </div>
 
                   <div>
                     <p>Rate</p>
-                    <p>{employee.rate}</p>
+                    <p>{employee?.rate || "Belum ada rate"}</p>
                   </div>
                 </div>
 

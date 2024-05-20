@@ -170,30 +170,6 @@ function TbodyWithAction({
         </tr>
       )}
 
-      <div>
-        <div
-          style={{
-            justifyContent: "space-between",
-            display: "flex",
-            alignItems: "center",
-          }}
-        >
-          <h4>Total Durasi</h4>
-          <p>placeholder</p>
-        </div>
-
-        <div
-          style={{
-            justifyContent: "space-between",
-            display: "flex",
-            alignItems: "center",
-          }}
-        >
-          <h6>Total Pendapatan</h6>
-          <p>placeholder</p>
-        </div>
-      </div>
-
       {showEditPopup && (
         <div
           id="editActivityForm"
