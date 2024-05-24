@@ -50,10 +50,16 @@ function Content() {
   };
 
   const handleAddProyekClick = () => {
+    setForm({
+      namaProyek: "",
+    })
     setAddProyek((prevVisible) => !prevVisible);
   };
 
   const handleCloseAddProyek = () => {
+    setForm({
+      namaProyek: "",
+    })
     setAddProyek(false);
   };
 

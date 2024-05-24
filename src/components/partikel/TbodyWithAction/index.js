@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Button from "../Button";
-import { useNavigate, useParams } from "react-router-dom";
 import { Spinner } from "react-bootstrap";
 import moment from "moment";
 import { useDispatch, useSelector } from "react-redux";
@@ -17,9 +16,7 @@ function TbodyWithAction({
   actionNotDisplay,
   status,
 }) {
-  const navigate = useNavigate();
   const dispatch = useDispatch();
-  const { id } = useParams();
   const lists = useSelector((state) => state.lists);
   const [showEditPopup, setShowEditPopup] = useState(false);
   const [form, setForm] = useState({
@@ -30,7 +27,7 @@ function TbodyWithAction({
     namaKegiatan: "",
     proyekId: "",
   });
-  const [editItemId, setEditItemId] = useState(null); // state untuk menyimpan ID kegiatan yang akan diedit
+  const [editItemId, setEditItemId] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
   const fetchOneActivity = async (itemId) => {
@@ -67,7 +64,7 @@ function TbodyWithAction({
 
   const handleCloseEditPopup = () => {
     setShowEditPopup(false);
-    setEditItemId(null); // Reset state untuk ID kegiatan yang akan diedit
+    setEditItemId(null);
   };
 
   const handleChange = async (e) => {
@@ -130,8 +127,8 @@ function TbodyWithAction({
                 (key) =>
                   display.indexOf(key) > -1 && (
                     <td key={key}>
-                      {key === "Date_RequestWO" || key === "Date_CompletionWO"
-                        ? moment(data[key]).format("DD-MM-YYYY, h:mm:ss a")
+                      {key === "tanggalMulai" || key === "tanggalBerakhir"
+                        ? moment(data[key]).format("DD-MM-YYYY")
                         : data[key]}
                     </td>
                   )
@@ -142,7 +139,7 @@ function TbodyWithAction({
                     <Button
                       variant="success"
                       size={"sm"}
-                      action={() => handleEditClick(data.id)} // Panggil handleEditClick dengan ID kegiatan
+                      action={() => handleEditClick(data.id)}
                     >
                       Edit
                     </Button>
