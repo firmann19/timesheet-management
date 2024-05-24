@@ -38,6 +38,14 @@ function Content() {
   const [employee, setEmployee] = useState(null);
 
   const handleAddActivityClick = () => {
+    setForm2({
+      tanggal_mulai: "",
+      tanggal_berakhir: "",
+      jam_mulai: "",
+      jam_berakhir: "",
+      namaKegiatan: "",
+      proyekId: "",
+    });
     setAddActivity((prevVisible) => !prevVisible);
   };
 
@@ -50,6 +58,14 @@ function Content() {
   };
 
   const handleCloseAddActivity = () => {
+    setForm2({
+      tanggal_mulai: "",
+      tanggal_berakhir: "",
+      jam_mulai: "",
+      jam_berakhir: "",
+      namaKegiatan: "",
+      proyekId: "",
+    });
     setAddActivity(false);
   };
 
