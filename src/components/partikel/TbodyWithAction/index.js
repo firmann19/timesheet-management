@@ -35,8 +35,10 @@ function TbodyWithAction({
 
     setForm({
       ...form,
-      tanggal_mulai: res.data.data.tanggal_mulai,
-      tanggal_berakhir: res.data.data.tanggal_berakhir,
+      tanggal_mulai: moment(res.data.data.tanggal_mulai).format("YYYY-MM-DD"),
+      tanggal_berakhir: moment(res.data.data.tanggal_berakhir).format(
+        "YYYY-MM-DD"
+      ),
       jam_mulai: res.data.data.jam_mulai,
       jam_berakhir: res.data.data.jam_berakhir,
       namaKegiatan: res.data.data.namaKegiatan,
