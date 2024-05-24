@@ -184,7 +184,7 @@ function Content() {
       const firstEmployee = res.data.data[0];
       setEmployee(firstEmployee);
     } else {
-      setEmployee(null); // If no data is available, set employee to null
+      setEmployee(null);
     }
   };
 
